@@ -1872,11 +1872,11 @@ class Home extends CI_Controller
 								$data['password'] = sha1($password);
 								$this->db->insert('user', $data);
 								$msg = 'done';
-								if($this->email_model->account_opening('user', $data['email'], $password) == false){
-									$msg = 'done_but_not_sent';
-								}else{
-									$msg = 'done_and_sent';
-								}
+								// if($this->email_model->account_opening('user', $data['email'], $password) == false){
+								// 	$msg = 'done_but_not_sent';
+								// }else{
+								// 	$msg = 'done_and_sent';
+								// }
 							}
 							echo $msg;
 						}else{
@@ -1902,11 +1902,11 @@ class Home extends CI_Controller
 							$data['password'] = sha1($password);
 							$this->db->insert('user', $data);
 							$msg = 'done';
-							if($this->email_model->account_opening('user', $data['email'], $password) == false){
-								$msg = 'done_but_not_sent';
-							}else{
-								$msg = 'done_and_sent';
-							}
+							// if($this->email_model->account_opening('user', $data['email'], $password) == false){
+							// 	$msg = 'done_but_not_sent';
+							// }else{
+							// 	$msg = 'done_and_sent';
+							// }
 						}
 						echo $msg;
 					}
